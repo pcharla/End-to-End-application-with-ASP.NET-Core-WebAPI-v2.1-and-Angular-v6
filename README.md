@@ -22,26 +22,22 @@ services.AddDbcontext<DataContext>(x =>x.UseSqlite(Configuration.GetConnectionSt
 								  
 use nuget package manager to install sqlite, can add connection strings to app settings.json
 
-migrations incrementally apply changes to dataabseto keep it in sync with entity framwork core model while presrving data in the database
+migrations incrementally apply changes to dataabse to keep it in sync with entity framwork core model while preserving data in the database
 
-when we add a migration entity framwork is takeing a look at data context class and creates tables based on dbsets
-add initial migration
+when we add a migration entity framework is taking a look at data context class and creates tables based on dbsets
+add initial migration with whatever tables you  need
 
-datacontext model snapshot is entity frameowks way of tracking which migrations have been applied, so it doesnt need to query the 
+datacontext model snapshot is entity framework's way of tracking which migrations have been applied, so it doesnt need to query the 
+database to know the same, designer.cs file-->used to decide what to remove from data conetxt model snapshot so entity framework understands where we are in terms of migrations, Entity framework is convention based
 
-database to know the same
-designer.cs file-->used to decide what to remove from data conetxt model snapshot so enity frameowkr undertands where we are 
-in terms of migrations
-Entity frameowkr is convention based
-
-if we wanna rollback a  migration, after w ehave applied down method in migration executes
+if we wanna rollback a  migration, after we have applied then down method in migration executes
 
 creating data and seeding data into our database? what is it, what are the better ways to do it
 Now to extract dtaa from database, we hook up our controller to our data context to retrieve them from the database
 
-
 testing --> cliet--> postman
 inject
+----------------------------------------------------------------------------------------------------------------------------------------Section 3:
 ----------------------------------------------------------------------------------------------------------------------------------------Section 4:
 Angular:
 
